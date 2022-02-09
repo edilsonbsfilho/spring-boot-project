@@ -1,0 +1,6 @@
+docker-compose up -d --build
+docker-compose down
+docker ps -a
+docker images
+docker login docker.io
+docker push edilsonbsfilho/rest-with-spring-boot-udemy
