@@ -1,6 +1,15 @@
 docker-compose up -d --build
 docker-compose down
+
 docker ps -a
 docker images
+
 docker login docker.io
+
 docker push edilsonbsfilho/rest-with-spring-boot-udemy
+
+docker pull jenkins/jenkins:lts
+docker run -p 8081:8080 -p 50000:50000 jenkins/jenkins:lts
+
+#pra saber a senha do jenkins
+docker logs containerId   

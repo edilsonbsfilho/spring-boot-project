@@ -37,6 +37,20 @@ services:
       - db
     networks:
       - udemy-network
+  Jenkins:
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    restart: always
+    ports:
+      - "8081:8080"
+      - "50000:50000"
+    container_name: jenkins
+    volumes:
+      - jenkins_data:/var/jenkins_home:rw
 networks:
     udemy-network:
         driver: bridge
+volumes:
+  jenkins_data:
+    name: jenkins_data
